@@ -7,11 +7,10 @@ public class Program
 {
      static void Main(string[] args)
     {
+        double sdfg = 1;
+        Console.WriteLine(sdfg);
+        
 
-       Calculater calc = new Calculater();
-        double square2 = calc.Calculater11(10, 20);
-        double square1 = calc.Calculater11(10, 20, 30);
-        Console.WriteLine($" Square1 = {square1},Square2 = {square2}");
     }
     static void forCycl()
     {
@@ -91,6 +90,50 @@ public class Program
         c.Hit(120);
         Console.WriteLine(c.Health);
     }
-   
- 
+    static void calc()
+    {
+
+        Calculater calc = new Calculater();
+        double square2 = calc.Calculater11(10, 20);
+        double square1 = calc.Calculater11(10, 20, 30);
+        Console.WriteLine($" Square1 = {square1},Square2 = {square2}");
+    }
+    static void Params()
+    {
+        Calculater calc = new Calculater();
+        double avg = calc.Average2(1, 2, 3, 4);
+        Console.WriteLine(avg);
+
+    }
+    static void arguments()
+    {
+        Calculater calc = new Calculater();
+        double square1 = calc.Calculater11(a: 10, b: 20, c: 30);
+    }
+    static void aOut() { 
+    Calculater calc = new Calculater();
+        if (calc.TryDivide(10,0, out double result))
+        {
+
+            Console.WriteLine(result);
+        }
+        else
+{
+    Console.WriteLine("Failed to divide");
+}
+Console.ReadLine();
+
+Console.WriteLine("Enter a number please");
+string line = Console.ReadLine();
+bool wasParsed = int.TryParse(line, out int number);
+if (wasParsed)
+{
+    Console.WriteLine(number);
+
+}
+else
+{
+    Console.WriteLine("Failed to Parse");
+}
+    }
 }

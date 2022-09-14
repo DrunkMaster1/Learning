@@ -8,10 +8,10 @@ public class Program
      static void Main(string[] args)
     {
 
-        Character c = new Character();
-        c.Hit(120);
-        Console.WriteLine(c.Health);
-
+       Calculater calc = new Calculater();
+        double square2 = calc.Calculater11(10, 20);
+        double square1 = calc.Calculater11(10, 20, 30);
+        Console.WriteLine($" Square1 = {square1},Square2 = {square2}");
     }
     static void forCycl()
     {
@@ -83,6 +83,13 @@ public class Program
         var stack = new Stack<int>();
         stack.Push(1);
 
+    }
+    static void character()
+    {
+
+        Character c = new Character();
+        c.Hit(120);
+        Console.WriteLine(c.Health);
     }
    
  

@@ -1,9 +1,16 @@
-﻿internal class Program
+﻿
+
+
+using Learning;
+
+public class Program
 {
-    private static void Main(string[] args)
+     static void Main(string[] args)
     {
 
-     
+        Character c = new Character();
+        c.Hit(120);
+        Console.WriteLine(c.Health);
 
     }
     static void forCycl()
